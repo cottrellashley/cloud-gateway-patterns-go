@@ -80,6 +80,11 @@ func TestPropagateAndAccessLogFields(t *testing.T) {
 	if _, ok := access["ts"]; !ok {
 		t.Fatal("ts field missing")
 	}
+	buf.Reset()
+	log.Info("drain", "delay", 1500*time.Millisecond)
+	if !strings.Contains(buf.String(), `"delay":"1.5s"`) {
+		t.Fatalf("duration not rendered as string: %s", buf.String())
+	}
 }
 
 type recSpy struct {

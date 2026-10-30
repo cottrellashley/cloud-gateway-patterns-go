@@ -18,12 +18,17 @@ import (
 
 // NewLogger returns a JSON logger with stable field names: ts (RFC 3339 with
 // nanoseconds, UTC), level, msg, plus service/version/env on every line.
+// time.Duration values are rendered as strings ("1.5s"), not nanoseconds.
 func NewLogger(w io.Writer, level slog.Leveler, service, version, env string) *slog.Logger {
 	h := slog.NewJSONHandler(w, &slog.HandlerOptions{
 		Level: level,
 		ReplaceAttr: func(groups []string, a slog.Attr) slog.Attr {
 			if len(groups) == 0 && a.Key == slog.TimeKey {
 				return slog.String("ts", a.Value.Time().UTC().Format(time.RFC3339Nano))
+			}
+			if a.Value.Kind() == slog.KindDuration {
+				// slog's JSON handler renders time.Duration as nanoseconds; "5s" is what humans and dashboards expect.
+				return slog.String(a.Key, a.Value.Duration().String())
 			}
 			return a
 		},
