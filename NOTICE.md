@@ -47,5 +47,18 @@ The `docs/` quote short excerpts from the following open-source projects for the
 | modelcontextprotocol/go-sdk | MIT |
 | uber-go/guide | Apache-2.0 |
 | dgryski/go-perfbook | CC-BY-SA-4.0 |
+| kubernetes/community (contributor docs) | Apache-2.0 / CC-BY-4.0 |
+| kubernetes/sample-controller | Apache-2.0 |
+| caddyserver/website (docs) | Apache-2.0 |
+| envoyproxy/envoy (docs) | Apache-2.0 |
+| dapr/components-contrib | Apache-2.0 |
+| dapr/dapr (runtime, decision records) | Apache-2.0 |
+| hashicorp/terraform-plugin-go | MPL-2.0 |
+| microsoft/api-guidelines | CC-BY-4.0 |
+| aip-dev/google.aip.dev | CC-BY-4.0 (text), Apache-2.0 (code) |
+| enihcam/azure-resource-manager-rpc (mirror of Microsoft's ARM RPC contract) | MIT |
+| ThreeDotsLabs/wild-workouts-go-ddd-example | MIT |
+| go-kratos/kratos-layout | MIT |
+| temporalio/sdk-go | MIT |
 
-`patterns/` contains original implementations written for this repository. Where an implementation follows an upstream algorithm closely (the EDF weighted round robin, the P2C balancer, the token bucket, the circuit breaker state machine, the run group, singleflight), the package documentation names the source.
+`patterns/` contains original implementations written for this repository. Where an implementation follows an upstream algorithm closely (the EDF weighted round robin, the P2C balancer, the token bucket, the circuit breaker state machine, the run group, singleflight, the workqueue dirty/processing semantics, the Caddy-style module registry lifecycle, the Kubernetes object metadata and condition semantics), the package documentation names the source.

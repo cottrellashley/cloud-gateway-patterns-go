@@ -1,6 +1,6 @@
 # Sources read
 
-Every repository below was cloned and read at the listed commit on 2026-10-30 to write `docs/` and `patterns/`. Links in the docs point at these commits so excerpts stay stable.
+Every repository below was cloned and read at the listed commit on 2026-10-30 to write `docs/` and `patterns/`. The rows marked "principles pass" were read a second time, in additional paths, for `docs/00-principles/`. Links in the docs point at these commits so excerpts stay stable.
 
 | Repository | Commit | Paths read | Licence |
 | --- | --- | --- | --- |
@@ -46,5 +46,22 @@ Every repository below was cloned and read at the listed commit on 2026-10-30 to
 | https://github.com/modelcontextprotocol/go-sdk | eafb671 | mcp/streamable.go, mcp/server.go | MIT |
 | https://github.com/uber-go/guide | 1d60a91 | style.md | Apache-2.0 |
 | https://github.com/dgryski/go-perfbook | 648834a | performance.md | CC-BY-SA-4.0 |
+| https://github.com/kubernetes/community | 309fa9a | contributors/devel/sig-architecture/{api-conventions,api_changes,feature-gates,conformance-tests,object-lifecycle}.md, sig-api-machinery/controllers.md | Apache-2.0 (docs CC-BY-4.0) |
+| https://github.com/kubernetes/kubernetes (principles pass) | ba832c1 | apimachinery/pkg/apis/meta/v1, apimachinery/pkg/runtime, apiserver/pkg/{registry/rest,endpoints/installer.go,endpoints/discovery,admission,authorization/authorizer,authentication/authenticator,server/config.go}, client-go/util/workqueue, component-base/featuregate, kube-aggregator/pkg/{apiserver,apis} | Apache-2.0 |
+| https://github.com/kubernetes/sample-controller | 940ca24 | controller.go | Apache-2.0 |
+| https://github.com/caddyserver/caddy (principles pass) | eb04ed5 | modules.go, context.go, modules/caddyhttp/{caddyhttp.go,routes.go} | Apache-2.0 |
+| https://github.com/caddyserver/website | a49be19 | src/docs/markdown/{architecture,extending-caddy}.md, extending-caddy/namespaces.md | Apache-2.0 (per repository) |
+| https://github.com/traefik/traefik (principles pass) | 38d53dd | pkg/provider/provider.go, pkg/config/dynamic, pkg/server/{configurationwatcher.go,middleware/middlewares.go,router} | MIT |
+| https://github.com/envoyproxy/envoy | 4ab3213 | docs/root/api-docs/xds_protocol.rst, docs/root/intro/arch_overview/{intro/terminology,http/http_filters,upstream/circuit_breaking,upstream/outlier,operations/*}.rst | Apache-2.0 |
+| https://github.com/dapr/components-contrib | 47da7bd | state/{store.go,feature.go}, pubsub/pubsub.go, bindings | Apache-2.0 |
+| https://github.com/dapr/dapr | 3342040 | pkg/components/{category.go,versioning.go,state/registry.go,pluggable}, docs/decision_records | Apache-2.0 |
+| https://github.com/hashicorp/terraform-plugin-go | 5376f1b | tfprotov6/{provider.go,resource.go,data_source.go,schema.go} | MPL-2.0 |
+| https://github.com/microsoft/api-guidelines | 1c58ca7 | azure/{Guidelines,ConsiderationsForServiceDesign,VersioningGuidelines}.md | CC-BY-4.0 |
+| https://github.com/aip-dev/google.aip.dev | 2ccc61a | aip/general/{0121,0122,0131,0134,0136,0151,0154,0155,0157,0158,0160,0162,0180,0185,0193,0203,0211,0216,0231}.md | CC-BY-4.0 (text), Apache-2.0 (code) |
+| https://github.com/enihcam/azure-resource-manager-rpc (mirror of the withdrawn Azure/azure-resource-manager-rpc) | 3a19a6d | v1.0/{common-api-details,resource-api-reference,proxy-api-reference,Addendum}.md | MIT |
+| https://github.com/ThreeDotsLabs/wild-workouts-go-ddd-example | 8ecfcdf | internal/trainings/{app,domain,adapters,ports}, internal/common/decorator | MIT |
+| https://github.com/go-kratos/kratos-layout | 59ad406 | repository layout, README | MIT |
+| https://github.com/ardanlabs/service (principles pass) | 9ea1316 | AGENTS.md, app/, business/, foundation/ | Apache-2.0 |
+| https://github.com/temporalio/sdk-go | 18b0571 | workflow/doc.go | MIT |
 
 Specifications referenced: Azure REST API Guidelines (microsoft/api-guidelines, vNext), ARM async operations and throttling docs, W3C Trace Context, RFC 6750, RFC 7515/7517/7518, RFC 8252, RFC 8785, RFC 9110, IETF draft-ietf-httpapi-ratelimit-headers, IETF draft-ietf-httpapi-idempotency-key-header, CloudEvents 1.0, MCP 2026-07-28 and the Tasks extension.
